@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="grid-bg"></div>
     <div class="ambient"></div>
@@ -45,7 +44,6 @@
     </div>
   </section>
  
-  <!-- ===== المنصات ===== -->
   <section class="platforms" id="platforms">
       <a class="platform" href="https://www.snapchat.com/@xmo0odx" target="_blank" rel="noopener" aria-label="سناب شات">
         <span class="p-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></svg></span>
@@ -81,42 +79,45 @@
       </a>
   </section>
  
-  <!-- ===== الكركترات ===== -->
   <section class="characters" id="characters">
     <div class="section-head">
       <h2>الكركترات</h2>
       <span>شخصيات يقدّمها IMOD</span>
     </div>
     <div class="char-grid">
-      <div class="char-card">
+      <div class="char-card" data-char="baker">
         <div class="avatar"><div class="avatar-inner" style="background-image:url('https://res.cloudinary.com/dd6y1ibqa/image/upload/v1780481906/image-removebg-preview_vrttre.png')"></div></div>
         <div class="char-name">بكر باكور</div>
         <div class="char-role">CHARACTER</div>
       </div>
-      <div class="char-card">
+      <div class="char-card" data-char="mrt">
         <div class="avatar"><div class="avatar-inner" style="background-image:url('https://res.cloudinary.com/dd6y1ibqa/image/upload/v1780482094/image-removebg-preview_1_uczh6z.png')"></div></div>
         <div class="char-name">MR.T</div>
         <div class="char-role">CHARACTER</div>
       </div>
-      <div class="char-card">
+      <div class="char-card" data-char="deglas">
         <div class="avatar"><div class="avatar-inner" style="background-image:url('https://res.cloudinary.com/dd6y1ibqa/image/upload/v1780482255/image-removebg-preview_2_jf4jix.png')"></div></div>
         <div class="char-name">دقلس</div>
         <div class="char-role">CHARACTER</div>
       </div>
-      <div class="char-card">
+      <div class="char-card" data-char="khnifs">
         <div class="avatar"><div class="avatar-inner" style="background-image:url('https://res.cloudinary.com/dd6y1ibqa/image/upload/v1780482461/image-removebg-preview_3_rabkui.png')"></div></div>
         <div class="char-name">خنيفس</div>
         <div class="char-role">CHARACTER</div>
       </div>
-      <div class="char-card">
+      <div class="char-card" data-char="as3as">
         <div class="avatar"><div class="avatar-inner" style="background-image:url('https://res.cloudinary.com/dd6y1ibqa/image/upload/v1780482936/image-removebg-preview_5_qmva8j.png')"></div></div>
         <div class="char-name">عسعس</div>
+        <div class="char-role">CHARACTER</div>
+      </div>
+      <div class="char-card" data-char="jarada">
+        <div class="avatar"><div class="avatar-inner" style="background-image:url('https://res.cloudinary.com/dd6y1ibqa/image/upload/v1780482936/image-removebg-preview_5_qmva8j.png')"></div></div>
+        <div class="char-name">جرادة</div>
         <div class="char-role">CHARACTER</div>
       </div>
     </div>
   </section>
  
-  <!-- ===== الفوتر ===== -->
   <footer class="site-footer">
     <div class="footer-cols">
       <div class="fcol">
@@ -147,7 +148,18 @@
     </div>
   </footer>
  
-  <!-- ===== إشعار الترحيب ===== -->
+  <div class="char-modal" id="charModal" aria-hidden="true">
+    <div class="cm-overlay" data-close></div>
+    <div class="cm-box" role="dialog" aria-modal="true" aria-labelledby="cmName">
+      <button class="cm-close" data-close aria-label="إغلاق">✕</button>
+      <div class="cm-avatar"><div class="cm-avatar-inner" id="cmAvatar"></div></div>
+      <h3 class="cm-name" id="cmName"></h3>
+      <div class="cm-role">CHARACTER</div>
+      <p class="cm-story" id="cmStory"></p>
+      <div class="cm-info" id="cmInfo"></div>
+    </div>
+  </div>
+ 
   <div class="toast">
     <div class="icon">👋</div>
     <div>
@@ -155,5 +167,126 @@
       <p class="t-sub">نوّرت موقع IMOD 🧡</p>
     </div>
   </div>
+ 
+  <script>
+    const STORIES = {
+      baker: {
+        story:
+          "أحد أفراد عائلة الموتشادو الإيطالية، ويُعرف بدوره في إدارة شؤون العصابات وتنظيم العلاقات بينها. يتميز بالهدوء والذكاء وحسن التخطيط .\n\n" +
+          "ويعتمد على النفوذ والتفاوض أكثر من القوة. يحظى بالاحترام بسبب شخصيته الحازمة وقدرته على اتخاذ القرارات الصعبة.",
+        info: {
+          "اللقب": "مسؤول العصابات",
+          "العائلة": "الموتشادو",
+          "الأصل": "إيطالي",
+          "الصفات": "ذكي، هادئ، حازم، دبلوماسي، استراتيجي، صاحب نفوذ واسع"
+        }
+      },
+ 
+      mrt: {
+        story: "شخصية مؤثرة وصاحب علاقات واسعة، معروف بهدوئه وذكائه في التعامل مع المواقف المختلفة. يعتمد على خبرته وشبكة معارفه لحل المشاكل وإدارة الأمور، ويتميز بحضور قوي واحترام كبير بين الناس.",
+        info: {
+          "اللقب": "101",
+          "العائلة": "الموتشادو",
+          "الأصل": "إيطالي",
+          "الصفات": "هادئ، ذكي، قيادي، صاحب نفوذ، ويتميز بالحكمة وحسن التصرف في مختلف المواقف."
+        }
+      },
+ 
+      deglas: {
+        story: "زعيم حارة السيب، معروف بشخصيته الطائشة وحبه للسيطرة وفرض النفوذ. يتصرف بثقة كبيرة ولا يتردد في مواجهة خصومه، ويعتمد على المكر والدهاء لتحقيق أهدافه,  لذلك يسعى دائمًا للحفاظ على مكانته داخل الحارة.",
+        info: {
+          "اللقب": "زعيم حارة السيب",
+          "العائلة": "السيب",
+          "الأصل": "افغاني",
+          "الصفات": "طائش، خبيث، طاغية، جريء، متهور، عنيد، صاحب كاريزما، محب للسيطرة."
+        }
+      },
+ 
+      khnifs: {
+        story: "عسكري فاسد اشتهر بتصرفاته غير المتوقعة وقراراته العشوائية، ويتعامل مع المواقف بأسلوب فوضوي يجعل من الصعب التنبؤ بردة فعله. لا يهتم كثيرًا بالقوانين إذا تعارضت مع مصالحه، ويملك شخصية غريبة تجمع بين الجرأة والاندفاع.",
+        info: {
+          "اللقب": "خنيفس ابن جود الله",
+          "المنصب": "عسكري فاسد",
+          "الأصل": "سيريلنكي",
+          "الصفات": "فاسد، متهور، فوضوي، غير متوقع، مندفع، جريء، عصبي، يميل للتصرفات الجنونية أحيانًا."
+        }
+      },
+ 
+      as3as: {
+        story: "مجرم معروف بتصرفاته الغريبة وصوته المميز والمستفز، ودائمًا يحاول الدخول في مخططات ومشاكل أكبر منه. رغم محاولاته المستمرة للهروب والإفلات، غالبًا ما تنكشف خططه وينتهي به الأمر في قبضة الشرطة بسبب تهوره وكثرة أخطائه.",
+        info: {
+          "اللقب": "عسعس العس",
+          "المكانة": "مجرم خطير",
+          "الأصل": "برازيلي",
+          "الصفات": "مستفز، غريب الأطوار، متهور، كثير المشاكل، غير محظوظ، مندفع، مجرم خطير، سريع الانكشاف، وصاحب ثقة زائدة بنفسه."
+        }
+      },
+ 
+      jarada: {
+        story: "مسترجلة بشكل يخوف، وصوتها أخشن من نص رجال المدينة. تمشي بقلبها أكثر من عقلها، واليوم اللي تعصب فيه محد يقدر يوقفها. حنونة مع اللي تحبهم لكن طيشها يجيب العيد أحيانًا.",
+        info: {
+          "اللقب": "جرادة الحنونة",
+          "المكانة": "مجرمة حنونة",
+          "الأصل": "منغولية",
+          "الصفات": "قوية شخصية، طايشة، حنونة، عاطفية، عنيدة، جريئة، اندفاعية، وفية."
+        }
+      }
+    };
+ 
+    const modal    = document.getElementById('charModal');
+    const cmName   = document.getElementById('cmName');
+    const cmStory  = document.getElementById('cmStory');
+    const cmInfo   = document.getElementById('cmInfo');
+    const cmAvatar = document.getElementById('cmAvatar');
+ 
+    function openChar(card) {
+      const key  = card.dataset.char;
+      const name = card.querySelector('.char-name').textContent;
+      const img  = card.querySelector('.avatar-inner').style.backgroundImage;
+      const data = STORIES[key] || {};
+ 
+      cmName.textContent  = name;
+      cmStory.textContent = data.story || "لا توجد قصة بعد.";
+      cmAvatar.style.backgroundImage = img;
+ 
+      cmInfo.innerHTML = "";
+      if (data.info) {
+        for (const [label, value] of Object.entries(data.info)) {
+          if (!value || value === "—") continue;
+          const row = document.createElement('div');
+          row.className = 'cm-info-row';
+          const l = document.createElement('span');
+          l.className = 'cm-info-label';
+          l.textContent = label;
+          const v = document.createElement('span');
+          v.className = 'cm-info-value';
+          v.textContent = value;
+          row.appendChild(l);
+          row.appendChild(v);
+          cmInfo.appendChild(row);
+        }
+      }
+ 
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+ 
+    function closeChar() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+ 
+    document.querySelectorAll('.char-card').forEach(card => {
+      card.addEventListener('click', () => openChar(card));
+    });
+    modal.querySelectorAll('[data-close]').forEach(el => {
+      el.addEventListener('click', closeChar);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeChar();
+    });
+  </script>
 </body>
 </html>
