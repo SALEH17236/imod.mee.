@@ -15,7 +15,6 @@ html, body {
 }
 body { overflow-x: hidden; }
  
-/* ===================== HERO ===================== */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -27,7 +26,6 @@ body { overflow-x: hidden; }
   overflow: hidden;
 }
  
-/* شبكة خفيفة بالخلفية */
 .grid-bg {
   position: absolute;
   inset: 0;
@@ -41,7 +39,6 @@ body { overflow-x: hidden; }
   mask-image: radial-gradient(ellipse 85% 75% at 45% 40%, #000 25%, transparent 78%);
 }
  
-/* واتر مارك كبير خلف النص */
 .watermark {
   position: absolute;
   left: 2%;
@@ -58,7 +55,6 @@ body { overflow-x: hidden; }
   user-select: none;
 }
  
-/* توهج خفيف بالخلفية */
 .ambient {
   position: absolute;
   top: 50%;
@@ -73,7 +69,6 @@ body { overflow-x: hidden; }
   animation: glowPulse 6s ease-in-out infinite;
 }
  
-/* توهج خفيف على اليسار */
 .ambient-left {
   position: absolute;
   top: 32%;
@@ -87,7 +82,6 @@ body { overflow-x: hidden; }
   animation: glowPulse2 7s ease-in-out infinite;
 }
  
-/* الشعار */
 .logo {
   position: absolute;
   top: 28px;
@@ -105,7 +99,6 @@ body { overflow-x: hidden; }
 .logo .imod { color: #fff; }
 .logo .accounts { color: var(--orange); }
  
-/* نص الهيرو على اليسار */
 .hero-text {
   flex: 1 1 auto;
   max-width: 600px;
@@ -183,7 +176,6 @@ body { overflow-x: hidden; }
 }
 .btn-ghost:hover { transform: translateY(-3px); border-color: var(--orange); color: var(--orange); }
  
-/* مؤشر التمرير لتحت */
 .scroll-cue {
   position: absolute;
   bottom: 24px;
@@ -202,7 +194,6 @@ body { overflow-x: hidden; }
 }
 .scroll-cue .mouse { font-size: 20px; line-height: 1; animation: bob 1.6s ease-in-out infinite; }
  
-/* بلوك الصورة + الخط + النص */
 .profile {
   flex: 0 0 auto;
   width: 30%;
@@ -213,7 +204,6 @@ body { overflow-x: hidden; }
   z-index: 2;
 }
  
-/* الصورة ثابتة (دخول بسيط بس بدون اهتزاز مستمر) */
 .person {
   width: 100%;
   height: auto;
@@ -232,7 +222,6 @@ body { overflow-x: hidden; }
 
 }
  
-/* الخط الأبيض: يبدأ من نص الصورة ويمتد لليسار (ممدود شوي زياده) */
 .divider {
   height: 2px;
   background: #fff;
@@ -244,9 +233,8 @@ body { overflow-x: hidden; }
   animation: drawLine 0.8s cubic-bezier(.2,.8,.2,1) 1s both;
 }
  
-/* الكلام تحت قريب من نهاية الخط */
 .bio {
-  align-self: stretch;        /* ياخذ نفس عرض الصورة كامل */
+  align-self: stretch;
   margin-right: 0;
   width: auto;
   margin-top: 18px;
@@ -261,7 +249,6 @@ body { overflow-x: hidden; }
 .bio p strong { color: #fff; font-weight: 700; }
 .bio .chars { color: var(--orange); font-weight: 700; }
  
-/* ===================== المنصات ===================== */
 .platforms {
   padding: 20px 20px 90px;
   display: flex;
@@ -297,7 +284,6 @@ body { overflow-x: hidden; }
   color: #e8e8e8;
 }
  
-/* ===================== الكركترات ===================== */
 .section-head {
   text-align: center;
   margin: 30px auto 34px;
@@ -382,11 +368,10 @@ body { overflow-x: hidden; }
   color: #7a7a7a;
 }
  
-/* ===================== الفوتر ===================== */
 .site-footer {
-  border-top: 2px solid #f5900a;     /* الخط البرتقالي فوق الفوتر */
+  border-top: 2px solid #f5900a;
   background: #050505;
-  font-family: 'Saira', sans-serif;  /* نفس خط IMOD ACCOUNTS */
+  font-family: 'Saira', sans-serif;
 }
 .footer-cols {
   display: flex;
@@ -434,7 +419,6 @@ body { overflow-x: hidden; }
   letter-spacing: 0.5px;
 }
  
-/* ===================== الإشعار ===================== */
 .toast {
   position: fixed;
   top: 26px;
@@ -465,7 +449,6 @@ body { overflow-x: hidden; }
 .toast .t-title { color: #fff; font-weight: 700; font-size: 15px; margin: 0; }
 .toast .t-sub   { color: #b8b8b8; font-size: 13px; margin: 2px 0 0; }
  
-/* ===================== Keyframes ===================== */
 @keyframes dropIn { from { opacity:0; transform: translateY(-22px);} to { opacity:1; transform: translateY(0);} }
 @keyframes riseIn { from { opacity:0; transform: translateY(24px);} to { opacity:1; transform: translateY(0);} }
 @keyframes popIn  { from { opacity:0; transform: translateY(20px) scale(.92);} to { opacity:1; transform: translateY(0) scale(1);} }
@@ -482,7 +465,6 @@ body { overflow-x: hidden; }
   100%{transform:translateX(130%); opacity:0;}
 }
  
-/* الشاشات الصغيرة */
 @media (max-width: 880px) {
   .hero {
     flex-direction: column;
@@ -521,4 +503,208 @@ body { overflow-x: hidden; }
   height: 64px;
   width: auto;
   display: block;
+}
+
+
+
+
+.char-card { cursor: pointer; }
+
+.char-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.char-modal.open { display: flex; }
+
+.cm-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.80);
+  backdrop-filter: blur(5px);
+  animation: cmFade .25s ease both;
+}
+
+/* صندوق البطاقة */
+.cm-box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.75);
+  animation: cmPop .3s cubic-bezier(.2,.8,.2,1) both;
+}
+/* شريط برتقالي علوي */
+.cm-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  z-index: 3;
+}
+
+/* زر الإغلاق */
+.cm-close {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 4;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.cm-close:hover {
+  background: var(--orange);
+  color: #1a1208;
+  border-color: var(--orange);
+  transform: rotate(90deg);
+}
+
+/* الرأس: الأفتار + الاسم + الشارة */
+.cm-head {
+  position: relative;
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 36px 24px 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: radial-gradient(140px 120px at 50% 0%, rgba(245,144,10,0.20), transparent 70%);
+}
+.cm-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(145deg, var(--orange), #9c5300);
+  box-shadow: 0 10px 26px rgba(245,144,10,0.35);
+}
+.cm-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #222 center/cover no-repeat;
+  border: 3px solid #141414;
+}
+.cm-name {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 800;
+  color: #fff;
+}
+.cm-role {
+  display: inline-block;
+  margin-top: 9px;
+  font-family: 'Saira', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--orange);
+  background: rgba(245,144,10,0.10);
+  border: 1px solid rgba(245,144,10,0.30);
+  padding: 4px 14px;
+  border-radius: 999px;
+  direction: ltr;
+}
+
+/* الجسم القابل للتمرير */
+.cm-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 22px 22px 26px;
+}
+.cm-scroll::-webkit-scrollbar { width: 7px; }
+.cm-scroll::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+.cm-scroll::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+/* القصة */
+.cm-story {
+  margin: 0;
+  font-size: 15px;
+  line-height: 2;
+  color: #c4c4c4;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+/* بطاقة المعلومات */
+.cm-info {
+  margin-top: 20px;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+}
+.cm-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.cm-info-row:last-child { border-bottom: none; }
+.cm-info-label {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.cm-info-value {
+  color: #d6d6d6;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.7;
+}
+
+/* صف الصفات (تاقات) */
+.cm-info-row--tags {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+.cm-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  width: 100%;
+  justify-content: flex-start;
+}
+.cm-tag {
+  font-size: 12.5px;
+  color: #f0c790;
+  background: rgba(245,144,10,0.10);
+  border: 1px solid rgba(245,144,10,0.25);
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+@keyframes cmFade { from{opacity:0;} to{opacity:1;} }
+@keyframes cmPop { from{opacity:0; transform: translateY(20px) scale(.96);} to{opacity:1; transform: translateY(0) scale(1);} }
+
+@media (max-width: 480px) {
+  .cm-head { padding: 32px 18px 20px; }
+  .cm-scroll { padding: 20px 16px 24px; }
+  .cm-avatar { width: 88px; height: 88px; }
+  .cm-name { font-size: 21px; }
 }
